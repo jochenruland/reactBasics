@@ -133,4 +133,45 @@ class OneTwoThree extends React.Component {
     }
 }
 
-export {BeOrNotToBe, HannieUndNannie, OneTwoThree};
+//Change Inline CSS Conditionally Based on Component State
+class ConditionalStyleChanger extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            input: ''
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState(
+            this.state = {
+                input: e.target.value
+            }
+        )
+    }
+
+    render() {
+        let inputStyle = {
+            border: '3px solid green'
+        }
+
+        if (this.state.input.length >= 10) {
+            inputStyle = {
+                border: '10px solid red'
+            } 
+        }
+
+        return (
+            <div>
+                <input
+                    value={this.state.input}
+                    style= {inputStyle}
+                    type= "text"
+                    onChange={this.handleChange} />
+            </div>
+        )
+    }
+}
+
+export {BeOrNotToBe, HannieUndNannie, OneTwoThree, ConditionalStyleChanger};
