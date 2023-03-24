@@ -6,7 +6,7 @@ import MyForm from './components/MyForm';
 import StateManager from './components/StateManager';
 import LifecycleMethods from './components/LifecycleMethods';
 import OnlyEvenNumbersRender from './components/LifecycleMethods2';
-import {BeOrNotToBe, HannieUndNannie, OneTwoThree} from './components/ConditionalRendering';
+import {BeOrNotToBe, HannieUndNannie, OneTwoThree, ConditionalStyleChanger} from './components/ConditionalRendering';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           <BeOrNotToBe />
           <HannieUndNannie />
           <OneTwoThree />
+          <ConditionalStyleChanger />
         </p>
       </header>
     </div>
