@@ -7,6 +7,7 @@ import StateManager from './components/StateManager';
 import LifecycleMethods from './components/LifecycleMethods';
 import OnlyEvenNumbersRender from './components/LifecycleMethods2';
 import {BeOrNotToBe, HannieUndNannie, OneTwoThree, ConditionalStyleChanger} from './components/ConditionalRendering';
+import MyToDoList from './components/DynamicRendering';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <BeOrNotToBe />
           <HannieUndNannie />
           <OneTwoThree />
-          <ConditionalStyleChanger />
+          <ConditionalStyleChanger /><br/>
+          <MyToDoList />
         </p>
       </header>
     </div>
