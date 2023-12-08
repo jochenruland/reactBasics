@@ -7,7 +7,7 @@ import StateManager from './components/StateManager';
 import LifecycleMethods from './components/LifecycleMethods';
 import OnlyEvenNumbersRender from './components/LifecycleMethods2';
 import {BeOrNotToBe, HannieUndNannie, OneTwoThree, ConditionalStyleChanger} from './components/ConditionalRendering';
-import MyToDoList from './components/DynamicRendering';
+import {MyToDoList, MyOnlineCommunity} from './components/DynamicRendering';
 
 function App() {
   return (
@@ -15,7 +15,18 @@ function App() {
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
-          <Counter />
+          
+          <MyOnlineCommunity />
+        </p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+/*
+<Counter />
         
           <MyForm />
           <StateManager />
@@ -26,10 +37,4 @@ function App() {
           <OneTwoThree />
           <ConditionalStyleChanger /><br/>
           <MyToDoList />
-        </p>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+          */

@@ -1,5 +1,7 @@
 import React from "react";
+import { findAllInRenderedTree } from "react-dom/test-utils";
 
+//Dynamic rendering of input list using Array.map()
 class MyToDoList extends React.Component {
     constructor(props) {
         super(props);
@@ -46,4 +48,48 @@ class MyToDoList extends React.Component {
     }
 }
 
-export default MyToDoList;
+//Dynamic rendering of an array of objects using Array.filter() first and render using Array.map()
+class MyOnlineCommunity extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            onlineCommunity: [
+                {
+                    username: 'Hans',
+                    online: true
+                },
+                {
+                    username: 'Peter',
+                    online: false
+                },
+                {
+                    username: 'Klaus',
+                    online: true
+                },
+                {
+                    username: 'Friedrich',
+                    online: false
+                },
+                {
+                    username: 'Emelie',
+                    online: true
+                },
+            ]
+        };
+        //bind methods if any
+    }
+
+
+    render() {
+        const myOnlineFriends = this.state.onlineCommunity.filter((user) => user.online === true);
+        const renderOnline = myOnlineFriends.map((e,i) => <li key={e.username+i}>{e.username}</li>);
+
+        return (
+            <div>
+                <ul>{renderOnline}</ul>
+            </div>
+        )
+    }
+}
+
+export {MyToDoList, MyOnlineCommunity};
